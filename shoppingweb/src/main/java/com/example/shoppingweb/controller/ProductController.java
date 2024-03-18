@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.example.shoppingweb.model.*;
@@ -69,7 +70,7 @@ public class ProductController {
 	
 		 
 		//更新商品
-			@PostMapping("/products/update/{productId}")
+			@PutMapping("/products/update/{productId}")
 			public ResponseEntity<String> updateProduct(@PathVariable String productId, @RequestBody Product updatedProduct) {
 			    try {
 			        srv.updateProduct(productId, updatedProduct);
