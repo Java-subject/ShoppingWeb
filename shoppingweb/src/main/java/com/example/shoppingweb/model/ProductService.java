@@ -71,9 +71,9 @@ public class ProductService
 		public void updateProduct(String productid,Product updatedProduct)throws Exception{
 			boolean productExists=dao.existsById(productid);			
 			if(productExists) {
-				if(!productid.equals(updatedProduct.getProductid())) {		
-					throw new Exception("Product ID cannot be changed");
-				}
+//				if(!productid.equals(updatedProduct.getProductid())) {		
+//					throw new Exception("Product ID cannot be changed");
+//				}
 				
 				Product existingProduct=dao.findById(productid).orElse(null);	
 				if(existingProduct!=null) {
